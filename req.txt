@@ -1,0 +1,4 @@
+wget==3.2
+import_ipynb==0.1.4
+pandas==1.4.4
+sklearn
