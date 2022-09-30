@@ -1,0 +1,6 @@
+,NIA,Accuracy,Estimator,Para
+0,Grey Wolf Optimizer,0.7471835985536772,RandomForestClassifier(n_estimators=500),{'n_estimators': 500}
+1,Bat Algorithm,0.7477900996641154,RandomForestClassifier(n_estimators=600),{'n_estimators': 600}
+2,Hybrid Bat Algorithm,0.7459705229154048,RandomForestClassifier(n_estimators=300),{'n_estimators': 300}
+3,Firefly Algorithm,0.7508198153552484,RandomForestClassifier(n_estimators=600),{'n_estimators': 600}
+4,Hybrid Self Adaptive Bat Algorithm,0.7488809353376282,RandomForestClassifier(n_estimators=200),{'n_estimators': 200}
