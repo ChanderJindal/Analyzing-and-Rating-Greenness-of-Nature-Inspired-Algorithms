@@ -1,6 +1,0 @@
-,Algo Name,Time Taken,Accuracy,Total Energy (J),Base Energy (J),CPU Energy (J),Monitor Energy (J),Disk Energy (J)
-0,Grey Wolf Optimizer,81,71.9683368649895,290.9999999999999,121.5,171.9,0.0,0.0
-1,Bat Algorithm,84,72.19144005532797,308.6,126.0,184.39999999999998,0.0,0.0
-2,Hybrid Bat Algorithm,79,72.25938231827408,267.59999999999997,117.0,154.6,0.0,0.0
-3,Firefly Algorithm,85,71.44468166433391,309.4,127.5,184.2,0.0,0.0
-4,Hybrid Self Adaptive Bat Algorithm,80,71.76474045265692,282.9,120.0,166.10000000000002,0.0,0.0
