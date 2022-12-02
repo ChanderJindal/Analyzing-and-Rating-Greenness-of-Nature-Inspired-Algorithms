@@ -1,1 +1,0 @@
-f'{population_size}_{c1}_{c2}_{w}_{min_velocity}_{max_velocity}_{repair}_{n_estimator}_{criterion}_{max_feature}'
