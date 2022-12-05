@@ -1,1 +1,0 @@
-{population_size}_{pa}_{n_estimator}_{criterion}_{max_feature}
