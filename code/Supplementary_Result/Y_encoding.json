@@ -1,1 +1,1 @@
-{"farm": 0, "impervious": 1, "water": 2, "forest": 3, "orchard": 4, "grass": 5}
+{"orchard": 0, "farm": 1, "water": 2, "grass": 3, "forest": 4, "impervious": 5}
