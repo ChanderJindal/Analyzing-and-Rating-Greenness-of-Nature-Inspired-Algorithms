@@ -102,18 +102,65 @@ from sklearn_nature_inspired_algorithms.model_selection import NatureInspiredSea
 from sklearn.ensemble import RandomForestClassifier
 
 """
-Artificial Bee Colony
+Genetic Algorithm
 """
 
-from niapy.algorithms.basic import ArtificialBeeColonyAlgorithm
+from niapy.algorithms.basic import GeneticAlgorithm
 
-abc_bounds = {'population_size':(10,100),'limit' :(20,100), 'n_estimator':(10,1000),'criterion':(0,1),'max_feature':(0,1)}
+ga_bounds = {'population_size':(10,100), 'tournament_size':(1,10), 'mutation_rate':(0.1,1.0), 'crossover_rate':(0.1,1.0),'selection':(0,2),'crossover':(0,4), 'mutation':(0,3), 'n_estimator':(10,1000),'criterion':(0,1),'max_feature':(0,1)}
 
-def mdl_abc(population_size, limit, n_estimator, criterion, max_feature):
+def mdl_ga(population_size, tournament_size, mutation_rate, crossover_rate, selection, crossover, mutation, n_estimator, criterion, max_feature):
 
     population_size = int(population_size)
-    limit = int(limit)
+    tournament_size = int(tournament_size)
     n_estimator = int(n_estimator) 
+
+    '''
+    * :func:`niapy.algorithms.basic.tournament_selection`
+    * :func:`niapy.algorithms.basic.roulette_selection`
+    '''
+    selection_name = ''
+    if selection < 1:
+        selection_name = 'tournament_selection'
+        selection = niapy.algorithms.basic.ga.tournament_selection
+    else:
+        selection_name = 'roulette_selection'
+        selection = niapy.algorithms.basic.ga.roulette_selection
+    '''
+    * :func:`niapy.algorithms.basic.uniform_crossover`
+    * :func:`niapy.algorithms.basic.two_point_crossover`
+    * :func:`niapy.algorithms.basic.multi_point_crossover`
+    * :func:`niapy.algorithms.basic.crossover_uros`
+    '''
+    crossover_name = ''
+    if crossover < 1:
+        crossover_name = 'uniform_crossover'
+        crossover =  niapy.algorithms.basic.ga.uniform_crossover
+    elif crossover < 2:
+        crossover_name = 'two_point_crossover'
+        crossover = niapy.algorithms.basic.ga.two_point_crossover
+    elif crossover < 3:
+        crossover_name = 'multi_point_crossover'
+        crossover = niapy.algorithms.basic.ga.multi_point_crossover
+    else:
+        crossover_name = 'crossover_uros'
+        crossover = niapy.algorithms.basic.ga.crossover_uros
+    '''
+    * :func:`niapy.algorithms.basic.uniform_mutation`
+    * :func:`niapy.algorithms.basic.creep_mutation`
+    * :func:`niapy.algorithms.basic.mutation_uros`
+    '''
+    mutation_name = ''
+    if mutation < 1:
+        mutation_name = 'uniform_mutation'
+        mutation = niapy.algorithms.basic.ga.uniform_mutation
+    elif mutation < 2:
+        mutation_name = 'creep_mutation'
+        mutation = niapy.algorithms.basic.ga.creep_mutation
+    else:
+        mutation_name = 'mutation_uros'
+        mutation = niapy.algorithms.basic.ga.mutation_uros
+
 
     if criterion < 0.5:
         criterion = 'gini'
@@ -127,10 +174,10 @@ def mdl_abc(population_size, limit, n_estimator, criterion, max_feature):
     else:
         max_feature = None
     
-    Para_lst = [population_size,limit,n_estimator,criterion,max_feature]
+    Para_lst = [population_size,tournament_size,mutation_rate,crossover_rate,selection_name,crossover_name,mutation_name,n_estimator,criterion,max_feature]
 
-    Algo = ArtificialBeeColonyAlgorithm()
-    Algo.set_parameters(population_size=population_size,limit=limit,seed=SEED) 
+    Algo = GeneticAlgorithm()
+    Algo.set_parameters(population_size=population_size,tournament_size=tournament_size,mutation_rate=mutation_rate,crossover_rate=crossover_rate,selection=selection,crossover=crossover,mutation=mutation,seed=SEED) 
 
     nia_mdl = NatureInspiredSearchCV(
         estimator=RandomForestClassifier(n_estimators=n_estimator,criterion=criterion,max_features=max_feature),         
@@ -140,7 +187,8 @@ def mdl_abc(population_size, limit, n_estimator, criterion, max_feature):
     )
     return nia_mdl, Para_lst
 
-"""Artificial Bee Colony"""
+"""Genetic Algorithm"""
+
 
 
 from bayes_opt import BayesianOptimization, UtilityFunction
@@ -256,5 +304,7 @@ def Optimize_and_plot(bounds,curr_mdl_fxn,Algo_name:str,Iters:int):
     plt.savefig(os.path.join(Supplementary_result,f'{Algo_name}_Iterations.png'))
     plt.show()
 
+"""BAYESIAN FUNCTION"""
 
-Optimize_and_plot(bounds=abc_bounds,curr_mdl_fxn=mdl_abc,Algo_name='ABC',Iters=50)
+
+Optimize_and_plot(bounds=ga_bounds,curr_mdl_fxn=mdl_ga,Algo_name='GA',Iters=50)
