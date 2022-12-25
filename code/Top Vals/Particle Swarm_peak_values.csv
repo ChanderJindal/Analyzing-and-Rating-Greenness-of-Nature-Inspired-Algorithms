@@ -1,4 +1,4 @@
-,ID,Time Taken(s),Total Power(J),CPU(J),Monitor(J),Disk(J),Base(J),Power Consumption (w)
+,ID,Time Taken(s),Total Energy(J),CPU(J),Monitor(J),Disk(J),Base(J),Power Consumption (w)
 0,PAR-0016,186,609.6000000000004,338.9,0.0,0.0,279.0,3.277419354838712
 1,PAR-0043,21,67.90000000000002,37.8,0.0,0.0,31.5,3.2333333333333343
 2,PAR-0030,75,268.99999999999994,157.5,0.0,0.3,112.5,3.586666666666666

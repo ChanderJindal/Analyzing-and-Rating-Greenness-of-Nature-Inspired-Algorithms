@@ -1,4 +1,4 @@
-,Algorithm,Time Taken(s),Total Power(J),CPU(J),Monitor(J),Disk(J),Base(J),Power Consumption (w)
+,Algorithm,Time Taken(s),Total Energy(J),CPU(J),Monitor(J),Disk(J),Base(J),Power Consumption (w)
 0,Bat,239.0,792.4600000000004,443.1800000000002,0.0,0.01,358.5,3.269911858886457
 1,Camel Algorithm,242.5,779.4399999999994,426.62999999999994,0.0,0.09,363.75,3.2246734167712687
 2,Cuckoo Search,216.8,700.1099999999997,384.2900000000006,0.0,0.01,325.2,3.2315450544535986
