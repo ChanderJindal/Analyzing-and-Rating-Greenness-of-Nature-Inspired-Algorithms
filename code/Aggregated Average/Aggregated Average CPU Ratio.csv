@@ -1,0 +1,6 @@
+,Algorithm,CPU(J),Ratio Comparison to PSO
+0,Bat,443.1800000000002,2.505
+1,Camel Algorithm,426.63,2.412
+2,Cuckoo Search,384.2900000000006,2.172
+3,Fire Fly,447.2899999999998,2.529
+4,Particle Swarm,176.88999999999993,1.0

@@ -1,0 +1,6 @@
+,Algorithm,Time Taken(s),Ratio Comparison to PSO
+0,Bat,239.0,2.479
+1,Camel Algorithm,242.5,2.516
+2,Cuckoo Search,216.8,2.249
+3,Fire Fly,261.1,2.709
+4,Particle Swarm,96.4,1.0
