@@ -1,0 +1,6 @@
+,Algorithm,Power Consumption (w),Ratio Comparison to PSO
+0,Bat,3.269911858886457,0.992
+1,Camel Algorithm,3.2246734167712687,0.978
+2,Cuckoo Search,3.231545054453598,0.98
+3,Fire Fly,3.1763434084614555,0.963
+4,Particle Swarm,3.296733262360477,1.0

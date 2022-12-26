@@ -1,0 +1,6 @@
+,Algorithm,Total Energy(J),Ratio Comparison to PSO
+0,Bat,792.4600000000004,2.497
+1,Camel Algorithm,779.4399999999994,2.456
+2,Cuckoo Search,700.1099999999997,2.206
+3,Fire Fly,827.8199999999991,2.609
+4,Particle Swarm,317.35,1.0
