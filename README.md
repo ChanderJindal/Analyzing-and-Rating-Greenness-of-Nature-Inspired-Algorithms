@@ -1,10 +1,8 @@
-#Analyzing and Rating Greenness of Nature-Inspired Algorithms
+# Analyzing and Rating Greenness of Nature-Inspired Algorithms
 
-#Abstract
+# Abstract
 Nature-inspired optimization algorithms (NIOAs) are modelled after natural phenomena such as the behaviour of birds, bees, and other animals. These algorithms are designed to mimic the way that nature optimizes solutions to problems, and they can be used to find the optimal solution to a wide range of problems in fields such as machine learning, computer science, and engineering. This study aims to objectively evaluate energy use and the associated carbon footprint for a few well-known NIOAs. To measure the energy utilized by each algorithm, we used Microsoft Joulemeter. The associated carbon footprint is determined using the recommendations of the Central Electricity Authority of India. According to the study’s findings, each algorithm uses varying amounts of energy to accomplish the same task. This study aims to enhance our knowledge regarding the energy consumption behaviour of different NIOAs and aid software designers in selecting greener NIOAs for their task implementation from the available options. The aim is to bring more focus toward greener software solutions to combat growing energy demands and climate change. Future studies might consider more NIOAs and their modifications for energy consumption analysis to identify the most environmentally friendly NIOAs. Additionally, further investigation into the potential effects of different CPU architectures on the efficiency and power usage of the NIOAs may be taken into account.
 
-If you find this helpful please use, 
-
-Suggested Citation:
+# Suggested Citation:
 
 Garg, Kanaishk and Jindal, Chander and Kumar, Shobhit and Juneja, Shallu, Analyzing and Rating Greenness of Nature-Inspired Algorithms (February 22, 2023). 6th International Conference on Innovative Computing and Communication (ICICC 2023), Available at SSRN: https://ssrn.com/abstract=4366959
